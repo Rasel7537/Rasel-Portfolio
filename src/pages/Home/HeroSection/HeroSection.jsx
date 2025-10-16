@@ -4,7 +4,7 @@ import FluidBackground from "./FluidBackground";
 import { ReactTyped } from "react-typed";
 import { MdEmail } from "react-icons/md";
 import { PiDownloadSimpleBold } from "react-icons/pi";
-import raselImg from "../../../assets/Rasel2.jpg";
+import raselPic from "../../../assets/Rasel2.jpg";
 const HeroSection = () => {
   return (
     <section className="relative w-full min-h-screen bg-base-100 overflow-hidden">
@@ -24,7 +24,7 @@ const HeroSection = () => {
 
         <div className="avatar pr-[6px] mb-6 lg:mb-0 ">
           <div className="w-52 sm:w-56 md:w-64 lg:w-96 lg:h-full rounded-full border-4 border-purple-500  shadow-[0_0_20px_#a855f7] hover:shadow-[0_0_20px_#a855f7] transition duration-700  mt-7">
-            <img src={raselImg} alt="Profile" />
+            <img src={raselPic} alt="Profile" />
           </div>
         </div>
 
