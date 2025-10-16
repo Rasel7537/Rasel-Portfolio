@@ -4,7 +4,7 @@ import FluidBackground from "./FluidBackground";
 import { ReactTyped } from "react-typed";
 import { MdEmail } from "react-icons/md";
 import { PiDownloadSimpleBold } from "react-icons/pi";
-
+import raselImg from "../../../assets/profile.jpg";
 const HeroSection = () => {
   return (
     <section className="relative w-full min-h-screen bg-base-100 overflow-hidden">
@@ -21,11 +21,13 @@ const HeroSection = () => {
                    py-12 sm:py-16 md:py-20 lg:py-24"
       >
         {/* ✅ Profile Image */}
+
         <div className="avatar pr-[6px] mb-6 lg:mb-0 ">
-          <div className="w-48 sm:w-56 md:w-64 lg:w-96 rounded-full ring ring-success ring-offset-base-100 ring-offset-2 mt-7">
-            <img src="https://i.ibb.co/1GqrBg1c/rasel.jpg" alt="Profile" />
+          <div className="w-52 sm:w-56 md:w-64 lg:w-96 lg:h-full rounded-full border-4 border-purple-500  shadow-[0_0_20px_#a855f7] hover:shadow-[0_0_20px_#a855f7] transition duration-700  mt-7">
+            <img src={raselImg} alt="Profile" />
           </div>
         </div>
+
 
         {/* ✅ Text Content */}
         <div className="text-center lg:text-left space-y-4 pl-[6px]">
@@ -128,3 +130,8 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+
+
+
+
