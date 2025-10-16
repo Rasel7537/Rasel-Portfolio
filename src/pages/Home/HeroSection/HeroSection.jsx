@@ -4,7 +4,7 @@ import FluidBackground from "./FluidBackground";
 import { ReactTyped } from "react-typed";
 import { MdEmail } from "react-icons/md";
 import { PiDownloadSimpleBold } from "react-icons/pi";
-import raselImg from "../../../assets/profile.jpg";
+import raselImg from "../../../assets/Rasel2.jpg";
 const HeroSection = () => {
   return (
     <section className="relative w-full min-h-screen bg-base-100 overflow-hidden">
