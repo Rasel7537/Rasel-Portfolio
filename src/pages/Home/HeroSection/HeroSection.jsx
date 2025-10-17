@@ -17,17 +17,16 @@ const HeroSection = () => {
       <div
         className="relative z-10 flex flex-col-reverse lg:flex-row-reverse items-center justify-between
                    w-full 
-                   px-4 sm:px-6 md:px-10 lg:px-20 xl:px-36 
+                   px-4 sm:px-6 sm:mt-10 md:px-10 lg:px-20 xl:px-36 
                    py-12 sm:py-16 md:py-20 lg:py-24"
       >
         {/* ✅ Profile Image */}
 
-        <div className="avatar pr-[6px] mb-6 lg:mb-0 ">
-          <div className="w-52 sm:w-56 md:w-64 lg:w-96 lg:h-full rounded-full border-4 border-purple-500  shadow-[0_0_20px_#a855f7] hover:shadow-[0_0_20px_#a855f7] transition duration-700  mt-7">
+        <div className="avatar pr-[6px] mb-6 lg:mb-0  ">
+          <div className=" sm:mt-10 w-52 sm:w-56 md:w-64 lg:w-96 lg:h-full rounded-full border-4 border-purple-500  shadow-[0_0_20px_#a855f7] hover:shadow-[0_0_20px_#a855f7] transition duration-700  mt-7">
             <img src={raselPic} alt="Profile" />
           </div>
         </div>
-
 
         {/* ✅ Text Content */}
         <div className="text-center lg:text-left space-y-4 pl-[6px]">
