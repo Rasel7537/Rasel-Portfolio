@@ -11,7 +11,7 @@ const Education = () => {
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-14 text-transparent bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 bg-clip-text  text-center"
+        className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-14 text-transparent bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 bg-clip-text text-center"
       >
         My Education
       </motion.h2>
@@ -56,7 +56,7 @@ const Education = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent mb-3"
+          className="text-2xl md:text-3xl lg:text-4xl font-bold bg-white bg-clip-text text-transparent mb-3"
         >
           Khulna Khan Bahadur Ahsanullah University
         </motion.h3>
