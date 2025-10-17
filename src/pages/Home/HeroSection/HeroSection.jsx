@@ -7,7 +7,7 @@ import { PiDownloadSimpleBold } from "react-icons/pi";
 import raselPic from "../../../assets/Rasel2.jpg";
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-screen bg-base-100 overflow-hidden">
+    <section id="home" className="relative w-full min-h-screen bg-base-100 overflow-hidden">
       {/* 🔥 Fluid Background */}
       <div className="absolute inset-0">
         <FluidBackground />

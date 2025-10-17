@@ -93,7 +93,7 @@ const Email = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-black flex flex-col items-center justify-center py-16 px-6 overflow-hidden">
+    <div id="contact" className="relative min-h-screen bg-black flex flex-col items-center justify-center py-16 px-6 overflow-hidden">
       {/* Section Heading */}
       <h2
         className="text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 bg-clip-text text-transparent"

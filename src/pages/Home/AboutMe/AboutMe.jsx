@@ -4,7 +4,7 @@ import "./aboutMe.css";
 
 const AboutMe = () => {
   return (
-    <section className="w-full px-4 sm:px-6 md:px-8 lg:px-16 py-10 sm:py-12 md:py-16 lg:py-20 grid grid-cols-1 md:grid-cols-2 items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 mx-auto bg-black">
+    <section id="about" className="w-full px-4 sm:px-6 md:px-8 lg:px-16 py-10 sm:py-12 md:py-16 lg:py-20 grid grid-cols-1 md:grid-cols-2 items-center gap-6 sm:gap-8 md:gap-10 lg:gap-12 mx-auto bg-black">
       <div className="flex justify-center items-center bg-black py-16 px-6 lg:ml-12">
         {/* 🔹 Animated Gradient Border */}
         <div className="animate-gradient bg-[linear-gradient(45deg,#4F46E5,#0e1538,#d400d4)] p-[6px] rounded-2xl shadow-[0_0_25px_rgba(212,0,212,0.5)] max-w-4xl w-full">

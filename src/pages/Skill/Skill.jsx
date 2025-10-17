@@ -22,7 +22,7 @@ const skills = [
 
 const Skill = () => {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-8 overflow-hidden ">
+    <div id="skills" className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-8 overflow-hidden ">
       <motion.h2
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
