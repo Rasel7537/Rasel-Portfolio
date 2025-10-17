@@ -27,7 +27,7 @@ const Skill = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="  text-5xl font-extrabold mb-14 text-transparent  bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 bg-clip-text"
+        className="text-5xl font-extrabold mb-14 text-transparent  bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 bg-clip-text"
       >
         💫 My Skills
       </motion.h2>
