@@ -1,94 +1,144 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from 'react';
+import Lottie from 'lottie-react';
+import emailAnimationData from '../../assets/email.json'; // আপনার JSON ফাইলের পাথ
 
 const Email = () => {
-  const [loading, setLoading] = useState(true);
+    const [isSent, setIsSent] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    
+    // ফর্মের ইনপুট ডেটা স্টেট (প্রয়োজনে যোগ করতে পারেন)
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
-    script.async = true;
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+        
+        console.log("ইমেল পাঠানো হচ্ছে...");
+        
+        try {
+            await new Promise(resolve => setTimeout(resolve, 2000)); 
+            
+            setIsLoading(false);
+            setIsSent(true); 
+            
+            setTimeout(() => {
+                setIsSent(false);
+                // setFormData({ name: '', email: '', message: '' }); 
+            }, 5000); 
 
-    script.onload = () => {
-      // লোডার কাজ করছে কিনা তা দেখতে আপাতত ৪ সেকেন্ড রাখা হলো।
-      // পরে এটি ২৫০০ মিলিসেকেন্ডে কমিয়ে দিতে পারেন।
-      setTimeout(() => setLoading(false), 4000);
+        } catch (error) {
+            console.error("ইমেল পাঠানোর সমস্যা:", error);
+            setIsLoading(false);
+            alert("ইমেল পাঠানো যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।");
+        }
     };
 
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
-  return (
-    <div
-      id="contact"
-      className="relative min-h-screen bg-black flex flex-col items-center justify-center py-16 px-6 overflow-hidden"
-    >
-      {/* Section Heading */}
-      <h2 className="text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 bg-clip-text text-transparent mb-10">
-        Contact Me
-      </h2>
-
-      {/* 🚨 Loader Animation: z-50 নিশ্চিত করা হয়েছে যেন এটি সবার উপরে থাকে */}
-      {loading && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-90 z-50 backdrop-blur-sm">
-          <div className="relative flex flex-col items-center space-y-5">
-            {/* Glowing Spinner */}
-            <div className="relative">
-              <div className="w-16 h-16 border-4 border-t-transparent border-purple-500 rounded-full animate-spin shadow-[0_0_20px_rgba(168,85,247,0.7)]"></div>
-              <div className="absolute inset-0 rounded-full blur-md bg-purple-600/40 animate-ping"></div>
+    return (
+        // পুরো সেকশনের ব্যাকগ্রাউন্ড কালো (bg-black) এবং টেক্সট সাদা (text-white)
+        <section className="bg-black text-white py-16 px-4 ">
+            {/* নতুন হেডিং সেকশন */}
+            <div className="max-w-4xl mx-auto text-center mb-12">
+                <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+                    Let's Create Together
+                </h1>
+                <p className="text-lg md:text-xl text-gray-300">
+                    Ready to bring your <span className="text-blue-400 font-bold">wildest ideas</span> to life? Let's make magic happen.
+                </p>
             </div>
 
-            {/* Loading Text */}
-            <p className="text-xl text-purple-300 font-semibold animate-pulse tracking-wider">
-              Loading Form...
-            </p>
-          </div>
-        </div>
-      )}
+            {/* অ্যানিমেশন এবং ফর্মের কন্টেইনার */}
+            <div 
+                // Outer Container: Flexbox, Centered, Dark BG, Shadow, Rounded corners
+                className="flex flex-col md:flex-row max-w-5xl mx-auto p-8 bg-black rounded-xl shadow-2xl border border-amber-300" // ফর্ম/অ্যানিমেশন এর ব্যাকগ্রাউন্ড ডার্ক গ্রে
+            >
+                {/* বাম পাশ: Lottie অ্যানিমেশন */}
+                <div className="md:w-1/2 flex items-center justify-center p-4">
+                    <div className="w-full max-w-sm">
+                        <Lottie
+                            animationData={emailAnimationData}
+                            loop={!isSent} 
+                            autoplay={true}
+                        />
+                    </div>
+                </div>
 
-      {/* Visme Form Embed Wrapper (Parent for absolute positioning) */}
-      <div
-        className="relative w-full max-w-2xl mx-auto"
-        style={{ maxWidth: "700px" }}
-      >
-        <div
-          className="visme_d rounded-2xl shadow-[0_0_30px_rgba(168,85,247,0.5)] overflow-hidden transition-all duration-700 ease-in-out hover:shadow-[0_0_40px_rgba(236,72,153,0.8)]"
-          data-title="Webinar Registration Form"
-          data-url="dwom0o77-untitled-project"
-          data-domain="forms"
-          data-full-page="false"
-          data-min-height="500px"
-          data-form-id="150506"
-          style={{
-            width: "100%",
-            minHeight: "500px",
-            border: "1px solid rgba(168,85,247,0.4)",
-            borderRadius: "1rem",
-            background: "rgba(17, 17, 17, 0.6)",
-          }}
-        ></div>
+                {/* ডান পাশ: কন্টাক্ট ফর্ম */}
+                <div className="md:w-1/2 p-4">
+                    <h2 className="text-3xl font-bold text-white mb-6 border-b border-gray-700 pb-2">
+                        যোগাযোগ করুন
+                    </h2>
+                    
+                    {isSent ? (
+                        // সফল মেসেজ
+                        <div className="text-center py-10 bg-green-900 bg-opacity-30 rounded-lg"> {/* সফল মেসেজের BG */}
+                            <p className="text-green-400 text-xl font-semibold">
+                                আপনার বার্তা সফলভাবে পাঠানো হয়েছে! 🎉
+                            </p>
+                            <p className="text-gray-300 mt-2">শীঘ্রই আপনার সাথে যোগাযোগ করা হবে।</p>
+                        </div>
+                    ) : (
+                        // ফর্ম
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            {/* Your Name */}
+                            <div>
+                                <label htmlFor="name" className="block text-sm font-medium text-gray-300">
+                                    Your Name *
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                    className="mt-1 block w-full px-4 py-2 border border-gray-700 rounded-lg shadow-sm bg-gray-800 text-white focus:ring-blue-500 focus:border-blue-500" // ইনপুট ফিল্ডের স্টাইল
+                                />
+                            </div>
 
-        {/* ✅ আপডেট করা ওভারলে বক্স: Visme ব্র্যান্ডিং ঢাকতে ব্যবহার করা হয়েছে */}
-        {!loading && (
-          <div
-            className="absolute z-10 flex items-center justify-center"
-            style={{
-              // Visme লেখা এবং সাদা ব্যাকগ্রাউন্ডের আকার
-              width: "150px",
-              height: "30px",
-              backgroundColor: "#000000", // ব্যাকগ্রাউন্ডের সাথে মেলাতে কালো রং
+                            {/* Email Address */}
+                            <div>
+                                <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+                                    Email Address *
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    className="mt-1 block w-full px-4 py-2 border border-gray-700 rounded-lg shadow-sm bg-gray-800 text-white focus:ring-blue-500 focus:border-blue-500" // ইনপুট ফিল্ডের স্টাইল
+                                />
+                            </div>
 
-              // সঠিক পজিশন: Next বাটনের নিচে, ডান কোণে
-              bottom: "5px",
-              right: "41px",
-            }}
-          ></div>
-        )}
-      </div>
-    </div>
-  );
+                            {/* Message */}
+                            <div>
+                                <label htmlFor="message" className="block text-sm font-medium text-gray-300">
+                                    Message *
+                                </label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="4"
+                                    required
+                                    className="mt-1 block w-full px-4 py-2 border border-gray-700 rounded-lg shadow-sm bg-gray-800 text-white focus:ring-blue-500 focus:border-blue-500" // ইনপুট ফিল্ডের স্টাইল
+                                ></textarea>
+                            </div>
+
+                            {/* Send Message Button */}
+                            <button
+                                type="submit"
+                                disabled={isLoading}
+                                className={`w-full py-2 px-4 border border-transparent rounded-lg text-white font-semibold shadow-md transition duration-300 ease-in-out ${
+                                    isLoading 
+                                    ? 'bg-gray-600 cursor-not-allowed' // লোডিং অবস্থায় বাটনের স্টাইল
+                                    : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
+                                }`}
+                            >
+                                {isLoading ? 'Sending...' : 'Send Message'}
+                            </button>
+                        </form>
+                    )}
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default Email;
