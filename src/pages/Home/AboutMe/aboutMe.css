@@ -1,8 +1,8 @@
 
-@import "tailwindcss";
+ @import "tailwindcss";
 
-/* 🔹 Gradient Animate Utility */
-@keyframes gradientMove {
+ /* 🔹 Gradient Animate Utility  */
+ @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
   }
@@ -12,7 +12,7 @@
   100% {
     background-position: 0% 50%;
   }
-}
+} 
 
 .animate-gradient {
   background-size: 300% 300%;
@@ -24,13 +24,15 @@
   syntax: '<angle>';
   inherits: false;
   initial-value: 0deg;
-}
+} 
 
-@theme {
+ @theme {
   --animate-rotate-border: border-rotate 4s linear infinite;
   @keyframes border-rotate {
     to {
       --border-angle: 360deg;
     }
   }
-}
+ } 
+ 
+

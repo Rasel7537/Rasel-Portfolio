@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -11,34 +10,85 @@ import {
 import { SiTailwindcss, SiExpress } from "react-icons/si";
 
 const skills = [
-  { name: "HTML & CSS", percent: 95, color: "from-orange-500 to-pink-500", icon: <FaHtml5 className="text-orange-400" /> },
-  { name: "Tailwind CSS", percent: 90, color: "from-sky-400 to-blue-500", icon: <SiTailwindcss className="text-sky-400" /> },
-  { name: "JavaScript", percent: 85, color: "from-yellow-400 to-amber-500", icon: <FaJsSquare className="text-yellow-400" /> },
-  { name: "React", percent: 80, color: "from-cyan-400 to-blue-600", icon: <FaReact className="text-cyan-400" /> },
-  { name: "MongoDB", percent: 70, color: "from-green-400 to-emerald-600", icon: <FaDatabase className="text-green-400" /> },
-  { name: "Express.js", percent: 65, color: "from-gray-400 to-gray-600", icon: <SiExpress className="text-gray-300" /> },
-  { name: "Firebase", percent: 75, color: "from-amber-400 to-orange-500", icon: <FaFire className="text-amber-400" /> },
+  {
+    name: "HTML & CSS",
+    percent: 95,
+    color: "from-orange-500 to-pink-500",
+    icon: <FaHtml5 className="text-orange-400" />,
+  },
+  {
+    name: "Tailwind CSS",
+    percent: 90,
+    color: "from-sky-400 to-blue-500",
+    icon: <SiTailwindcss className="text-sky-400" />,
+  },
+  {
+    name: "JavaScript",
+    percent: 85,
+    color: "from-yellow-400 to-amber-500",
+    icon: <FaJsSquare className="text-yellow-400" />,
+  },
+  {
+    name: "React",
+    percent: 80,
+    color: "from-cyan-400 to-blue-600",
+    icon: <FaReact className="text-cyan-400" />,
+  },
+  {
+    name: "MongoDB",
+    percent: 70,
+    color: "from-green-400 to-emerald-600",
+    icon: <FaDatabase className="text-green-400" />,
+  },
+  {
+    name: "Express.js",
+    percent: 65,
+    color: "from-gray-400 to-gray-600",
+    icon: <SiExpress className="text-gray-300" />,
+  },
+  {
+    name: "Firebase",
+    percent: 75,
+    color: "from-amber-400 to-orange-500",
+    icon: <FaFire className="text-amber-400" />,
+  },
 ];
 
 const Skill = () => {
   return (
-    <div id="skills" className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-8 overflow-hidden ">
+    <div
+      id="skills"
+    className=" pt-20 pb-16 min-h-screen bg-black text-white flex flex-col items-center justify-center 
+      "
+
+    >
       <motion.h2
-        initial={{ opacity: 0, y: -50 }}
+        initial={{opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-5xl font-extrabold mb-14 text-transparent  bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 bg-clip-text"
+        className="text-5xl font-extrabold mb-5 text-transparent  bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 bg-clip-text"
       >
-        💫 My Skills
+        💫 Tech Skills
       </motion.h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-6xl">
+      {/* updating sub text */}
+      <motion.p
+        initial={{ opacity: 0, y: 0 }} 
+        animate={{ opacity: 1, y: 10 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+         className="text-base sm:text-lg md:text-xl text-white mb-14 max-w-xl text-center px-4"
+      >
+       I work with modern tech to build efficient, user-friendly applications, making digital experiences smarter and smoother.
+      </motion.p>
+      {/* ----------------------------------- */}
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-9 w-full max-w-6xl px-6 sm:px-6">
         {skills.map((skill, i) => (
           <motion.div
             key={i}
             whileHover={{ scale: 1.08, rotateY: 10 }}
             transition={{ type: "spring", stiffness: 120, damping: 10 }}
-            className="relative bg-gray-900/70 backdrop-blur-md rounded-2xl shadow-2xl p-8 text-center border border-gray-800 hover:border-purple-500 transition-all duration-300 overflow-hidden flex flex-col items-center justify-center"
+            className="relative bg-gray-900/70 backdrop-blur-md rounded-2xl shadow-2xl p-8 text-center border border-gray-800 hover:border-purple-500 transition-all duration-300  flex flex-col items-center justify-center"
           >
             {/* Floating Logo (smooth & continuous) */}
             <motion.div
@@ -51,7 +101,7 @@ const Skill = () => {
                 ],
               }}
               transition={{
-                duration: 2.5, 
+                duration: 2.5,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -74,7 +124,9 @@ const Skill = () => {
               className="absolute top-[52%] left-1/2 -translate-x-1/2 w-24 h-12 bg-white/10 blur-xl rounded-full"
             ></motion.div>
 
-            <h3 className="text-xl font-semibold mt-6 mb-4 z-10">{skill.name}</h3>
+            <h3 className="text-xl font-semibold mt-6 mb-4 z-10">
+              {skill.name}
+            </h3>
 
             {/* Progress Bar (faster + smoother) */}
             <div className="relative w-full bg-gray-700 h-3 rounded-full overflow-hidden z-10">
@@ -82,7 +134,7 @@ const Skill = () => {
                 initial={{ width: 0 }}
                 whileInView={{ width: `${skill.percent}%` }}
                 transition={{
-                  duration: 0.8, 
+                  duration: 0.8,
                   ease: "easeOut",
                   delay: i * 0.1,
                 }}

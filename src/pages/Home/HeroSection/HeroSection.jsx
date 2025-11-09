@@ -30,7 +30,7 @@ const HeroSection = () => {
 
         {/* ✅ Text Content */}
         <div className="text-center lg:text-left space-y-4 pl-[6px]">
-          <p className="text-base sm:text-lg text-gray-400">Hello, I’m</p>
+          <p className="text-base sm:text-lg text-white">Hello, I’m</p>
 
           <h1
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold 
@@ -57,7 +57,7 @@ const HeroSection = () => {
             />
           </h2>
 
-          <p className="py-2 text-sm sm:text-base text-gray-300 max-w-md mx-auto lg:mx-0">
+          <p className="py-2 text-sm sm:text-base text-white gray-300 max-w-md mx-auto lg:mx-0">
             I enjoy building modern, responsive web applications and exploring
             creative solutions through code.
           </p>

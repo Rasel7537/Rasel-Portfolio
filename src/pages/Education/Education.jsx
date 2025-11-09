@@ -1,4 +1,3 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import { FaUniversity } from "react-icons/fa";
@@ -8,13 +7,23 @@ const Education = () => {
     <div className="min-h-screen bg-black flex flex-col items-center justify-center text-white px-6 py-16">
       {/* === Section Heading === */}
       <motion.h2
-        initial={{ opacity: 0, y: -40 }}
+        initial={{ opacity: 0, y: 10}}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-14 text-transparent bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 bg-clip-text text-center"
+        className="text-5xl md:text-5xl lg:text-5xl font-extrabold mb-6 text-transparent bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 bg-clip-text text-center"
       >
-        My Education
+        🎓 Education
       </motion.h2>
+      {/* === Sub-title (New & Responsive) === */}
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="text-base sm:text-base md:text-lg lg:text-xl text-white mb-9 max-w-2xl text-center leading-relaxed"
+      >
+        Cultivating knowledge and skills for future tech leadership.
+      </motion.p>
+      {/* ==================================== */}
 
       {/* === Education Card === */}
       <motion.div
