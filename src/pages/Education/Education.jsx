@@ -10,7 +10,7 @@ const Education = () => {
         initial={{ opacity: 0, y: 10}}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-5xl md:text-5xl lg:text-5xl font-extrabold mb-6 text-transparent bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 bg-clip-text text-center"
+        className="text-5xl md:text-5xl lg:text-5xl font-extrabold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500  text-center"
       >
         🎓 Education
       </motion.h2>

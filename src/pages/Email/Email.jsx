@@ -40,9 +40,10 @@ const Email = () => {
     <section className="bg-black text-white py-16 px-4">
       {/* হেডিং সেকশন */}
       <div className="max-w-4xl mx-auto text-center mb-12">
-        <h1 className="text-5xl font-extrabold mb-3 text-transparent bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 bg-clip-text lg:bg-clip-text lg:text-transparent lg:text-5xl">
+        <h1 className="text-5xl md:text-4xl lg:text-5xl font-extrabold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-green-300 to-blue-800 text-center ">
           🛠️ Let's Build
         </h1>
+
         <p className="text-lg md:text-xl text-gray-300">
           Ready to bring your{" "}
           <span className="text-blue-400 font-bold">wildest ideas</span> to

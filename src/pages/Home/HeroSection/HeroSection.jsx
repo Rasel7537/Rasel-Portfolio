@@ -16,8 +16,8 @@ const HeroSection = () => {
       {/* Main Content */}
       <div
         className="relative z-10 flex flex-col-reverse lg:flex-row-reverse items-center justify-between
-                   w-full 
-                   px-4 sm:px-6 sm:mt-10 md:px-10 lg:px-20 xl:px-36 
+                   w-full
+                   px-4 sm:px-6 sm:mt-10 md:px-10 lg:px-20 xl:px-36
                    py-12 sm:py-16 md:py-20 lg:py-24"
       >
         {/* ✅ Profile Image */}
@@ -33,8 +33,8 @@ const HeroSection = () => {
           <p className="text-base sm:text-lg text-white">Hello, I’m</p>
 
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold 
-                       bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold
+                       bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500
                        bg-clip-text text-transparent drop-shadow-lg"
           >
             Md. Rasel Uddin
@@ -42,7 +42,7 @@ const HeroSection = () => {
 
           {/* 🔥 Typed Effect */}
           <h2
-            className="text-lg sm:text-xl md:text-2xl font-medium animate-pulse text-white 
+            className="text-lg sm:text-xl md:text-2xl font-medium animate-pulse text-white
                        [text-shadow:_0_0_8px_rgb(255,255,255),_0_0_12px_rgb(255,253,254)]"
           >
             <ReactTyped
@@ -68,10 +68,10 @@ const HeroSection = () => {
               href="https://github.com/Rasel7537"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#0d1117] text-white 
-                         shadow-[0_0_10px_#6e40c9,0_0_20px_#6e40c9,0_0_30px_#6e40c9] 
-                         hover:scale-125 hover:text-[#6e40c9] 
-                         hover:shadow-[0_0_20px_#6e40c9,0_0_40px_#6e40c9,0_0_60px_#6e40c9] 
+              className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#0d1117] text-white
+                         shadow-[0_0_10px_#6e40c9,0_0_20px_#6e40c9,0_0_30px_#6e40c9]
+                         hover:scale-125 hover:text-[#6e40c9]
+                         hover:shadow-[0_0_20px_#6e40c9,0_0_40px_#6e40c9,0_0_60px_#6e40c9]
                          transition"
             >
               <FaGithub size={18} />
@@ -80,10 +80,10 @@ const HeroSection = () => {
               href="https://www.linkedin.com/in/md-rasel-uddin-96a277373/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#0d1117] text-white 
-                         shadow-[0_0_10px_#0a66c2,0_0_20px_#0a66c2,0_0_30px_#0a66c2] 
-                         hover:scale-125 hover:text-[#0a66c2] 
-                         hover:shadow-[0_0_20px_#0a66c2,0_0_40px_#0a66c2,0_0_60px_#0a66c2] 
+              className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#0d1117] text-white
+                         shadow-[0_0_10px_#0a66c2,0_0_20px_#0a66c2,0_0_30px_#0a66c2]
+                         hover:scale-125 hover:text-[#0a66c2]
+                         hover:shadow-[0_0_20px_#0a66c2,0_0_40px_#0a66c2,0_0_60px_#0a66c2]
                          transition"
             >
               <FaLinkedinIn size={18} />
@@ -92,10 +92,10 @@ const HeroSection = () => {
               href="https://mail.google.com/mail/?view=cm&fs=1&to=rasel.uddin.engineer@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#0d1117] text-white 
-                         shadow-[0_0_10px_#0ac22f,0_0_20px_#0ac244,0_0_30px_#0ac238] 
-                         hover:scale-125 hover:text-[#0ac247] 
-                         hover:shadow-[0_0_20px_#0ac272,0_0_40px_#0abf6a,0_0_60px_#09d71e] 
+              className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#0d1117] text-white
+                         shadow-[0_0_10px_#0ac22f,0_0_20px_#0ac244,0_0_30px_#0ac238]
+                         hover:scale-125 hover:text-[#0ac247]
+                         hover:shadow-[0_0_20px_#0ac272,0_0_40px_#0abf6a,0_0_60px_#09d71e]
                          transition"
             >
               <MdEmail size={18} />
@@ -107,7 +107,7 @@ const HeroSection = () => {
             href="/resume.pdf"
             target="_blank"
             download
-            className="relative inline-block h-[45px] sm:h-[50px] w-[160px] sm:w-[190px] 
+            className="relative inline-block h-[45px] sm:h-[50px] w-[160px] sm:w-[190px]
                        hover:scale-[0.95] transition duration-300 mt-6 sm:mt-8"
           >
             <i className="absolute -inset-[2px] block rounded-[3px] bg-[linear-gradient(45deg,#4F46E5,#0e1538,#d400d4)]"></i>
@@ -129,8 +129,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-
-
-
-
