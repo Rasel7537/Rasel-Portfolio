@@ -58,12 +58,11 @@ const Skill = () => {
   return (
     <div
       id="skills"
-    className=" pt-20 pb-16 min-h-screen bg-black text-white flex flex-col items-center justify-center 
+      className=" pt-20 pb-16 min-h-screen bg-black text-white flex flex-col items-center justify-center 
       "
-
     >
       <motion.h2
-        initial={{opacity: 0, y: 0 }}
+        initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="text-5xl font-extrabold mb-5 text-transparent  bg-gradient-to-r from-cyan-400 via-green-400 to-blue-500 bg-clip-text"
@@ -73,12 +72,13 @@ const Skill = () => {
 
       {/* updating sub text */}
       <motion.p
-        initial={{ opacity: 0, y: 0 }} 
+        initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: 10 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-         className="text-base sm:text-lg md:text-xl text-white mb-14 max-w-xl text-center px-4"
+        className="text-base sm:text-lg md:text-xl text-white mb-14 max-w-xl text-center px-4"
       >
-       I work with modern tech to build efficient, user-friendly applications, making digital experiences smarter and smoother.
+        I work with modern tech to build efficient, user-friendly applications,
+        making digital experiences smarter and smoother.
       </motion.p>
       {/* ----------------------------------- */}
 

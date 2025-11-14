@@ -75,9 +75,9 @@ const Email = () => {
   };
 
   return (
-    <section className="bg-black text-white py-16 px-4">
+    <section  className="bg-black text-white py-16 px-4">
       {/* Heading Section */}
-      <div className="max-w-4xl mx-auto text-center mb-12">
+      <div id="contact" className="max-w-4xl mx-auto text-center mb-12">
         <h1 className="text-5xl md:text-4xl lg:text-5xl font-extrabold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-green-300 to-blue-800 text-center">
           🛠️ Let's Build
         </h1>
@@ -106,7 +106,7 @@ const Email = () => {
       </div>
 
       {/* Animation + Form */}
-      <div className="flex flex-col md:flex-row max-w-5xl mx-auto p-8 bg-black rounded-xl shadow-2xl border border-purple-500">
+      <div  className="flex flex-col md:flex-row max-w-5xl mx-auto p-8 bg-black rounded-xl shadow-2xl border border-purple-500">
         {/* Left: Animation */}
         <div className="md:w-1/2 flex items-center justify-center p-4">
           <div className="w-full max-w-sm">
