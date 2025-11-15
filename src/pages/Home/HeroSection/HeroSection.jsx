@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import FluidBackground from "./FluidBackground";
 import { ReactTyped } from "react-typed";
 import { MdEmail } from "react-icons/md";
@@ -7,7 +7,10 @@ import { PiDownloadSimpleBold } from "react-icons/pi";
 import raselPic from "../../../assets/Rasel2.jpg";
 const HeroSection = () => {
   return (
-    <section id="home" className="relative w-full min-h-screen bg-base-100 overflow-hidden">
+    <section
+      id="home"
+      className="relative w-full min-h-screen bg-base-100 overflow-hidden"
+    >
       {/* 🔥 Fluid Background */}
       <div className="absolute inset-0">
         <FluidBackground />
@@ -76,29 +79,47 @@ const HeroSection = () => {
             >
               <FaGithub size={18} />
             </a>
+
             <a
               href="https://www.linkedin.com/in/md-rasel-uddin-96a277373/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#0d1117] text-white
-                         shadow-[0_0_10px_#0a66c2,0_0_20px_#0a66c2,0_0_30px_#0a66c2]
-                         hover:scale-125 hover:text-[#0a66c2]
-                         hover:shadow-[0_0_20px_#0a66c2,0_0_40px_#0a66c2,0_0_60px_#0a66c2]
-                         transition"
+              className="
+              flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 
+              rounded-full bg-[#0d1117] text-white
+              shadow-[0_0_10px_#4b5fc7,0_0_20px_#6677d6,0_0_30px_#8090e5]
+              hover:scale-125 hover:text-[#aab5f2]
+              hover:shadow-[0_0_20px_#c6cff8,0_0_40px_#dee4fd,0_0_60px_#f3f6ff]
+              transition
+              "
             >
               <FaLinkedinIn size={18} />
             </a>
+
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=rasel.uddin.engineer@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#0d1117] text-white
-                         shadow-[0_0_10px_#0ac22f,0_0_20px_#0ac244,0_0_30px_#0ac238]
-                         hover:scale-125 hover:text-[#0ac247]
-                         hover:shadow-[0_0_20px_#0ac272,0_0_40px_#0abf6a,0_0_60px_#09d71e]
-                         transition"
+             shadow-[0_0_10px_#009dff,0_0_20px_#00b2ff,0_0_30px_#00c8ff]
+             hover:scale-125 hover:text-[#29d3ff]
+             hover:shadow-[0_0_20px_#00d5ff,0_0_40px_#00e4ff,0_0_60px_#38f3ff]
+             transition"
             >
               <MdEmail size={18} />
+            </a>
+
+            <a
+              href="https://wa.me/8801314026529"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#0d1117] text-white
+             shadow-[0_0_10px_#0ac22f,0_0_20px_#0ac244,0_0_30px_#0ac238]
+             hover:scale-125 hover:text-[#0ac247]
+             hover:shadow-[0_0_20px_#0ac272,0_0_40px_#0abf6a,0_0_60px_#09d71e]
+             transition"
+            >
+              <FaWhatsapp size={18} />
             </a>
           </div>
 
