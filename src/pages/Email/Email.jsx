@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
@@ -75,7 +74,7 @@ const Email = () => {
   };
 
   return (
-    <section  className="bg-black text-white py-16 px-4">
+    <section className="bg-black text-white py-16 px-4">
       {/* Heading Section */}
       <div id="contact" className="max-w-4xl mx-auto text-center mb-12">
         <h1 className="text-5xl md:text-4xl lg:text-5xl font-extrabold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-green-300 to-blue-800 text-center">
@@ -106,7 +105,7 @@ const Email = () => {
       </div>
 
       {/* Animation + Form */}
-      <div  className="flex flex-col md:flex-row max-w-5xl mx-auto p-8 bg-black rounded-xl shadow-2xl border border-purple-500">
+      <div className="flex flex-col md:flex-row max-w-5xl mx-auto p-8 bg-black rounded-xl shadow-2xl border border-purple-500">
         {/* Left: Animation */}
         <div className="md:w-1/2 flex items-center justify-center p-4">
           <div className="w-full max-w-sm">
@@ -185,7 +184,11 @@ const Email = () => {
                 rounded-[5px] border border-[#040a29] bg-[rgba(14,21,56,0.75)] tracking-[1px] 
                 text-white font-semibold text-base before:absolute before:top-0 before:-left-[50%]
                 before:h-full before:w-full before:bg-[rgba(255,255,255,0.075)] before:skew-x-[25deg]
-                ${isLoading ? "opacity-70 cursor-not-allowed" : "hover:opacity-90"}`}
+                ${
+                  isLoading
+                    ? "opacity-70 cursor-not-allowed"
+                    : "hover:opacity-90"
+                }`}
               >
                 {isLoading ? "Sending..." : "Send Message"}
               </span>
@@ -198,3 +201,6 @@ const Email = () => {
 };
 
 export default Email;
+
+
+
